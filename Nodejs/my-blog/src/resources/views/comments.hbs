@@ -1,0 +1,23 @@
+<div class="column">
+
+    {{#each comments}}
+    <div class="col-lg-9">
+            <h2>{{this.name}}</h2>
+            <p>{{this.des}}</p>
+    </div>
+    {{/each}}
+
+    <h2>Create a comment</h2>
+    <form method="POST" action="/comments/store">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="name" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Add a comment</label>
+            <input type="text" id="des" name="des" class="form-control" placeholder="Comment something...">
+        </div>
+         <button type="submit" class="btn btn-primary">Post</button>
+    </form>
+   
+</div>
